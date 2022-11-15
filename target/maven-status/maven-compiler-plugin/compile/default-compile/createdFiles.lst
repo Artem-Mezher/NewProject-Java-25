@@ -1,4 +1,5 @@
 Main.class
-Student.class
-StudyProfile.class
-University.class
+io\XlsReader.class
+model\University.class
+model\Student.class
+enums\StudyProfile.class

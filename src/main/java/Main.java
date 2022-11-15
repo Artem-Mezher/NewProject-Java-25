@@ -1,11 +1,24 @@
+import io.XlsReader;
+import model.Student;
+import model.University;
+
+import java.io.IOException;
+import java.util.List;
+
 public class Main {
 
-    public static void main(String[] args) {
-        University University = new University();
-        System.out.println(University);
+    public static void main(String[] args) throws IOException {
 
-        Student Student = new Student();
-        System.out.println(Student);
-
+        List<University> universities =
+                XlsReader.readXlsUniversities("src/main/resources/universityInfo.xlsx");
+        for(University university : universities) {
+            System.out.println(university);
         }
+
+        List<Student> students =
+                XlsReader.readXlsStudents("src/main/resources/universityInfo.xlsx");
+        for(Student student : students) {
+            System.out.println(student);
+        }
+    }
 }
